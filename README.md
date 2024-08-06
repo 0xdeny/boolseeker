@@ -1,1 +1,1 @@
-# boolseeker
+# BoolSeeker
