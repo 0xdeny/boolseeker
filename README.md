@@ -7,5 +7,5 @@ A tool to analyze APK files for security vulnerabilities.
 To install the tool, run:
 
 ```bash
-go install github.com/YOUR_USERNAME/boolseeker@latest
+go install github.com/0xdeny/boolseeker@latest
 ```
