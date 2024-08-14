@@ -1,6 +1,6 @@
 # Boolseeker
 
-A tool to analyze APK files for security vulnerabilities.
+A tool to analyze APK files for hardening detection mechanisms.
 
 ## Installation
 
