@@ -10,6 +10,8 @@ To install the tool, run:
 go install github.com/0xdeny/boolseeker@latest
 ```
 
+Note: Please ensure that <a href="https://www.kali.org/tools/apktool/" target="_blank">apktool</a> is installed on your system for Boolseeker to function properly (tested only with this installation source).
+
 ## Usage
 
 Use `-h` or `--help` to display the help for the tool:
@@ -50,7 +52,7 @@ boolseeker -a example.apk -so -o out.txt
 
 **Symeon Papadimitriou**
 
-[LinkedIn](https://www.linkedin.com/in/symeon-papadimitriou/)
+<a href="https://www.linkedin.com/in/symeon-papadimitriou/" target="_blank">LinkedIn</a>
 
 ## License
 
