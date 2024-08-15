@@ -16,6 +16,8 @@ import (
 	"github.com/briandowns/spinner"
 )
 
+const version = "1.0.0"
+
 func CheckApkTool() error {
 	_, err := exec.LookPath("apktool")
 	if err != nil {
@@ -205,6 +207,8 @@ func CustomUsage() {
 	fmt.Println("        Path to the output file for boolean method names (required)")
 	fmt.Println("  -so")
 	fmt.Println("        Enable searching in .so files")
+	fmt.Println("  --version")
+	fmt.Println("        Display the current version of boolseeker")
 }
 
 func SearchInSoFiles(directory string, keywords []string) error {
@@ -267,9 +271,15 @@ func main() {
 	outputFile := flag.String("o", "", "Path to the output file for boolean method names (required)")
 	flag.StringVar(outputFile, "output", "", "Path to the output file for boolean method names (required)")
 	searchSo := flag.Bool("so", false, "Enable searching in .so files")
+	versionFlag := flag.Bool("version", false, "Display the current version of boolseeker")
 
 	flag.Usage = CustomUsage
 	flag.Parse()
+
+	if *versionFlag {
+		fmt.Printf("Boolseeker version %s\n", version)
+		return
+	}
 
 	if *apkFile == "" || *outputFile == "" {
 		fmt.Println("\033[31m✖️ Error: -a/--apk and -o/--output flags are required.\033[0m")
