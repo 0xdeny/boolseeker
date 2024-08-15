@@ -200,7 +200,7 @@ func CleanUp(directory string) {
 }
 
 func CustomUsage() {
-	fmt.Println("\nUsage of boolseeker:")
+	fmt.Println("Usage of boolseeker:")
 	fmt.Println("  -a, --apk string")
 	fmt.Println("        Path to the APK file to decode and analyze (required)")
 	fmt.Println("  -o, --output string")
@@ -209,6 +209,8 @@ func CustomUsage() {
 	fmt.Println("        Enable searching in .so files")
 	fmt.Println("  --version")
 	fmt.Println("        Display the current version of boolseeker")
+	fmt.Println("  -h, --help string")
+	fmt.Println("        Display help information")
 }
 
 func SearchInSoFiles(directory string, keywords []string) error {
@@ -272,12 +274,19 @@ func main() {
 	flag.StringVar(outputFile, "output", "", "Path to the output file for boolean method names (required)")
 	searchSo := flag.Bool("so", false, "Enable searching in .so files")
 	versionFlag := flag.Bool("version", false, "Display the current version of boolseeker")
+	helpFlag := flag.Bool("h", false, "Display help information")
+	flag.BoolVar(helpFlag, "help", false, "Display help information")
 
 	flag.Usage = CustomUsage
 	flag.Parse()
 
 	if *versionFlag {
 		fmt.Printf("Boolseeker version %s\n", version)
+		return
+	}
+
+	if *helpFlag {
+		flag.Usage()
 		return
 	}
 
