@@ -10,7 +10,7 @@ To install the tool, run:
 go install github.com/0xdeny/boolseeker@latest
 ```
 
-Note: Please ensure that <a href="https://www.kali.org/tools/apktool/" target="_blank">apktool</a> is installed on your system for Boolseeker to function properly (tested only with this installation source).
+Note: Please ensure that [apktool](https://www.kali.org/tools/apktool/){:target="_blank"} is installed on your system for Boolseeker to function properly (tested only with this installation source).
 
 ## Usage
 
@@ -40,19 +40,20 @@ Boolseeker requires an apk file (-a) and an output file (-o) as mandatory parame
 boolseeker -a example.apk -o out.txt
 ```
 
-![Example-1](images/boolseeker-1.png)
+> Output
+    ![Example-1](images/boolseeker-1.png)
 
 ```bash
 boolseeker -a example.apk -so -o out.txt
 ```
-
-![Example-2](images/boolseeker-2.png)
+> Output
+    ![Example-2](images/boolseeker-2.png)
 
 ## Author
 
 **Symeon Papadimitriou**
 
-<a href="https://www.linkedin.com/in/symeon-papadimitriou/" target="_blank">LinkedIn</a>
+[LinkedIn](https://www.linkedin.com/in/symeon-papadimitriou/){:target="_blank"}
 
 ## License
 
