@@ -42,7 +42,7 @@ boolseeker -a example.apk -o out.txt
 
 <details>
   <summary>Output</summary>
-  ![Example-1](images/boolseeker-1.png)
+  <img src="images/boolseeker-1.png" alt="Example-1">
 </details>
 
 ```bash
@@ -50,7 +50,7 @@ boolseeker -a example.apk -so -o out.txt
 ```
 <details>
   <summary>Output</summary>
-  ![Example-2](images/boolseeker-2.png)
+  <img src="images/boolseeker-2.png" alt="Example-2">
 </details>
 
 ## Author
