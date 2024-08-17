@@ -2,6 +2,15 @@
 
 Boolseeker is a powerful but simple tool designed to analyze APK files for detection mechanisms related to hardenings, saving time when bypassing basic hardening measures in Android applications. It extracts all boolean Java methods with their full paths and saves them to an output file, while also searching for specific keyword strings within those methods and providing the option to search for keyword strings in shared object (SO) native functions.
 
+More specifically it checks for:
+    - Rooted Device Detection;
+    - Emulator Detection;
+    - Runtime Integrity Verification;
+    - File Integrity Checks.
+
+Finally, if the android application method names are not obfuscated, all boolean Java functions are saved in an output file and thus it can be searched with `grep` for suspicious methods related to detections.
+
+
 ## Installation
 
 To install the tool, run:
