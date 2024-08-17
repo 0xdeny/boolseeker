@@ -35,7 +35,7 @@ Boolseeker requires an apk file (-a) and an output file (-o) as mandatory parame
 ## Options
 
 
-```bash
+```
 -a, --apk string      Path to the APK file to decode and analyze (required)
 -o, --output string   Path to the output file for boolean method names (required)
 -so                   Enable searching in .so files
