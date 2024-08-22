@@ -89,7 +89,7 @@ func DecodeAPK(apkFile, outputDirectory string, s *spinner.Spinner) error {
 }
 
 func SearchKeywordsInMethod(methodContent string) ([]string, bool) {
-	keywords := []string{"ro.hardware", "ro.kernel.qemu", "ro.product.device", "ro.build.product", "ro.product.model", "ro.build.fingerprint", "/sys/qemu_trace", "/dev/qemu_trace", "/dev/socket/qemud", "/dev/qemu_pipe", "/system/bin/netcfg", "/proc/cpuinfo", "/proc/tty/drivers", "magisk", "root", "test-keys", "superuser", "Superuser", "daemonsu", "99SuperSUDaemon", ".has_su_daemon", "genymotion", "emulator", "nox", "27042", "frida", "27043", "FridaGadget", "xposed", "MessageDigest", "getPackageInfo", "signature", "/system/app/Superuser.apk", "/system/xbin/su"}
+	keywords := []string{"ro.hardware", "ro.kernel.qemu", "ro.product.device", "ro.build.product", "ro.product.model", "ro.build.fingerprint", "/dev/qemu_trace", "/system/bin/netcfg", "magisk", "root", "test-keys", "superuser", "Superuser", "daemonsu", "99SuperSUDaemon", ".has_su_daemon", "genymotion", "emulator", "nox", "27042", "frida", "27043", "FridaGadget", "xposed", "MessageDigest", "getPackageInfo", "signature", "/system/app/Superuser.apk", "/system/xbin/su", "com.noshufou.android.su.elite", "com.noshufou.android.su", "com.yellowes.su", "com.koushikdutta.superuser", "com.thirdparty.superuser", "eu.chainfire.supersu", "/system/usr/we-need-root/", "ueventd.android_x86.rc", "x86.prop", "ueventd.ttVM_x86.rc", "init.ttVM_x86.rc", "fstab.ttVM_x86", "fstab.vbox86", "init.vbox86.rc", "ueventd.vbox86.rc", "/dev/socket/qemud", "/dev/qemu_pipe", "/system/lib/libc_malloc_debug_qemu.so", "/sys/qemu_trace", "/system/bin/qemu-props", "/dev/socket/genyd", "/dev/socket/baseband_genyd", "/proc/tty/drivers", "/proc/cpuinfo"}
 	foundKeywords := []string{}
 
 	for _, keyword := range keywords {
@@ -366,8 +366,8 @@ func main() {
 		}
 	}
 
-	root_detection_keywords := []string{"magisk", "root", "test-keys", "superuser", "Superuser", "daemonsu", "99SuperSUDaemon", ".has_su_daemon", "/system/app/Superuser.apk", "/system/xbin/su"}
-	emulator_detection_keywords := []string{"ro.hardware", "ro.kernel.qemu", "ro.product.device", "ro.build.product", "ro.product.model", "ro.build.fingerprint", "genymotion", "geny", "emulator", "nox", "/proc/tty/drivers", "/sys/qemu_trace", "/dev/qemu_trace", "/dev/socket/qemud", "/dev/qemu_pipe", "/system/bin/netcfg", "/proc/cpuinfo", "/proc/tty/drivers"}
+	root_detection_keywords := []string{"magisk", "root", "test-keys", "superuser", "Superuser", "daemonsu", "99SuperSUDaemon", ".has_su_daemon", "/system/app/Superuser.apk", "/system/xbin/su", "com.noshufou.android.su.elite", "com.noshufou.android.su", "com.yellowes.su", "com.koushikdutta.superuser", "com.thirdparty.superuser", "eu.chainfire.supersu", "/system/usr/we-need-root/"}
+	emulator_detection_keywords := []string{"ro.hardware", "ro.kernel.qemu", "ro.product.device", "ro.build.product", "ro.product.model", "ro.build.fingerprint", "genymotion", "geny", "emulator", "nox", "/dev/qemu_trace", "/system/bin/netcfg", "ueventd.android_x86.rc", "x86.prop", "ueventd.ttVM_x86.rc", "init.ttVM_x86.rc", "fstab.ttVM_x86", "fstab.vbox86", "init.vbox86.rc", "ueventd.vbox86.rc", "/dev/socket/qemud", "/dev/qemu_pipe", "/system/lib/libc_malloc_debug_qemu.so", "/sys/qemu_trace", "/system/bin/qemu-props", "/dev/socket/genyd", "/dev/socket/baseband_genyd", "/proc/tty/drivers", "/proc/cpuinfo"}
 	runtime_integrity_verification_keywords := []string{"27042", "frida", "27043", "FridaGadget", "xposed"}
 	file_integrity_keywords := []string{"MessageDigest", "getPackageInfo", "signature"}
 	fmt.Printf("\033[32m✔ Total number of unique boolean methods found: %d\033[0m\n", len(methodSet))
