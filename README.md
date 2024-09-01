@@ -8,8 +8,9 @@ More specifically, it searches for mechanisms related to:
 * Runtime Integrity Verification;
 * File Integrity Checks.
 
-Finally, if the android application method names are not obfuscated, all boolean Java functions are saved in an output file and thus it can be searched with `grep` for suspicious methods related to detections.
+Furthermore, if the android application method names are not obfuscated, all boolean Java functions are saved in an output file and thus it can be searched with `grep` for suspicious methods related to detections.
 
+For more information, please check out my <a href="https://symsec.net/posts/tools/10afed1c/" target="_blank">Symsec post</a>.
 
 ## Installation
 
